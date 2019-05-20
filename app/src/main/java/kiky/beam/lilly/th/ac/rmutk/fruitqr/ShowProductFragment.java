@@ -68,20 +68,6 @@ public class ShowProductFragment extends Fragment {
 
         String[] columnDetailProduct = myconstant.getColumnDetailProduct(); //ดึงค่าจาก myconstane
 
-//        try {
-//
-//            GetDataWhereOneColumn getDataWhereOneColumn = new GetDataWhereOneColumn(getActivity());
-//            getDataWhereOneColumn.execute("id", idProduct, myconstant.getUrlGetProductWhereId());
-//            String jsonProduct = getDataWhereOneColumn.get();
-//            Log.d("18AprilV3", "jsonProduct ==>>> " + jsonProduct);
-//
-//            JSONArray jsonArray = new JSONArray(jsonProduct);
-//            JSONObject jsonObject = jsonArray.getJSONObject(0);
-//            for (int i = 0; i<columnDetailProduct.length; i+= 1){ //นับคอลัม
-//                productStringArrayList.add(jsonObject.getString(columnDetailProduct[i])); //ตำแหน่ง i
-//                Log.d("18ApriV3", "productStringArrayList[" + i + "] ==> " + productStringArrayList.get(i));
-//
-//            }
 
         try {
 
@@ -101,18 +87,18 @@ public class ShowProductFragment extends Fragment {
             Log.d("27ApriV4", "id Sent ==> " + productStringArrayList.get(4));
 
             //สำหรับ Framer
-            GetDataWhereOneColumn getDataWhereOneColumn1 = new GetDataWhereOneColumn(getActivity());
-            getDataWhereOneColumn1.execute("id", productStringArrayList.get(4), myconstant.getUrlGetFramerWhereId()); //อยู่ในตำแหน่งที่ 4 idFramer
-            String jsonFramer = getDataWhereOneColumn1.get();
-            Log.d("27AprilV4", "jsonFramer ==>>> " + jsonFramer);
-            String[] columnDetailFramer = myconstant.getColumnDetailFramer();
-
-            JSONArray jsonArray1 = new JSONArray(jsonFramer);
-            JSONObject jsonObject1 = jsonArray1.getJSONObject(0);
-            for (int i = 0; i < columnDetailFramer.length; i += 1) {
-                framerStringArrayList.add(jsonObject1.getString(columnDetailFramer[i]));
-                Log.d("18AprilV4", "framerStringArrayList[" + i + "] ==> " + framerStringArrayList.get(i));
-            }
+//            GetDataWhereOneColumn getDataWhereOneColumn1 = new GetDataWhereOneColumn(getActivity());
+//            getDataWhereOneColumn1.execute("id", productStringArrayList.get(4), myconstant.getUrlGetFramerWhereId()); //อยู่ในตำแหน่งที่ 4 idFramer
+//            String jsonFramer = getDataWhereOneColumn1.get();
+//            Log.d("27AprilV4", "jsonFramer ==>>> " + jsonFramer);
+//            String[] columnDetailFramer = myconstant.getColumnDetailFramer();
+//
+//            JSONArray jsonArray1 = new JSONArray(jsonFramer);
+//            JSONObject jsonObject1 = jsonArray1.getJSONObject(0);
+//            for (int i = 0; i < columnDetailFramer.length; i += 1) {
+//                framerStringArrayList.add(jsonObject1.getString(columnDetailFramer[i]));
+//                Log.d("18AprilV4", "framerStringArrayList[" + i + "] ==> " + framerStringArrayList.get(i));
+//            }
 
             //สำหรับ User
             GetDataWhereOneColumn getDataWhereOneColumn2 = new GetDataWhereOneColumn(getActivity());
@@ -167,12 +153,6 @@ public class ShowProductFragment extends Fragment {
 
 
 
-
-//            ShowView
-//            Name Product
-//            TextView nameTextView = getView().findViewById(R.id.txtName);
-//            nameTextView.setText(productStringArrayList.get(5));
-
 //            Image Product
             ImageView imageView = getView().findViewById(R.id.imvImage);
             Picasso.get().load(productStringArrayList.get(7)).resize(800,600).into(imageView);
@@ -202,48 +182,7 @@ public class ShowProductFragment extends Fragment {
             TextView productnameTextView = getView().findViewById(R.id.txtProductName);
             productnameTextView.setText(productStringArrayList.get(2));
 
-//          Address Product
-//            TextView productaddressTextView = getView().findViewById(R.id.txtProductAdd);
-//            productaddressTextView.setText(userStringArrayList.get(4));
 
-//          Phone Product
-//            TextView productphoneTextView = getView().findViewById(R.id.txtProductPhone);
-//            productphoneTextView.setText(userStringArrayList.get(5));
-
-
-
-//            ShowView
-//            Name Fruit
-//            TextView fruitTextView = getView().findViewById(R.id.txtFruit);
-//            fruitTextView.setText(framerStringArrayList.get(2));
-//
-////          name Fruit
-//            TextView fruittTextView = getView().findViewById(R.id.txtFruitt);
-//            fruittTextView.setText(framerStringArrayList.get(2));
-
-//          Amount Fruit
-//            TextView fruitamountTextView = getView().findViewById(R.id.txtFruitAmount);
-//            fruitamountTextView.setText(framerStringArrayList.get(3));
-
-//          Unit Fruit
-//            TextView fruitunitTextView = getView().findViewById(R.id.txtFruitUnit);
-//            fruitunitTextView.setText(framerStringArrayList.get(4));
-
-//          Date Fruit
-            TextView fruitdateTextView = getView().findViewById(R.id.txtFruitdate);
-            fruitdateTextView.setText(framerStringArrayList.get(5));
-
-//          Name Fruit
-            TextView fruitnameTextView = getView().findViewById(R.id.txtProductName);
-            fruitnameTextView.setText(userStringArrayList.get(1));
-
-//          Address Fruit
-//            TextView fruitaddressTextView = getView().findViewById(R.id.txtProductAdd);
-//            fruitaddressTextView.setText(userStringArrayList.get(4));
-
-//          Phone Fruit
-//            TextView fruitphoneTextView = getView().findViewById(R.id.txtProductPhone);
-//            fruitphoneTextView.setText(userStringArrayList.get(5));
 
 
         } catch (Exception e) {
