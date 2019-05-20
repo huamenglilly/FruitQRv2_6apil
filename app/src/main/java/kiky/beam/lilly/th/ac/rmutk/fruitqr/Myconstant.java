@@ -4,13 +4,16 @@ import java.lang.ref.SoftReference;
 
 public class Myconstant {
 
-    private String[] favoriteFruits = {"โปรดเลือกผลไม้","กล้วย","ส้ม","มะละกอ", "แตงโม","ทุเรียน", "เงาะ", "มะม่วง", "เชอร์รี่", "สับปะรด", "ลำไย"};
-    private String[] units = {"กล่อง","ขีด","กรัม","กิโลกรัม","ด้าม","ผล","ลัง","หวี"};
+    private String[] favoriteFruits = {"โปรดเลือกผลไม้", "กล้วย", "ส้ม", "มะละกอ", "แตงโม", "ทุเรียน", "เงาะ", "มะม่วง", "เชอร์รี่", "สับปะรด", "ลำไย"};
+    private String[] units = {"กล่อง", "ขีด", "กรัม", "กิโลกรัม", "ด้าม", "ผล", "ลัง", "หวี"};
     private String[] columnDetailProduct = {"id", "idRecord", "NameRecord", "TypeRecord", "idFarmer",
-                                                "Name", "Detail", "Image", "Amount", "Unit", "Date", "QRcode"};
+            "Name", "Detail", "Image", "Amount", "Unit", "Date", "QRcode"};
     private String[] columnDetailFramer = {"id", "idRecord", "Name", "Amount", "Unit", "Date", "Namesend"};
     private String[] columnUser = {"id", "Name", "FirstName", "SecondName", "Address", "Phone", "User", "Password", "TypeUser"};
     private String[] columnUserFarmer = {"id", "Name", "FirstName", "SecondName", "Address", "Phone", "User", "Password", "TypeUser"};
+
+
+    private String urlGetTypeFruit= "http://www.androidthai.in.th/rmutk/getAllTypeFruit.php"; // หน้ารายการผลผลิตชุมชน
 
 
     private String nameFileSharePreference = "Fruit";
@@ -21,14 +24,14 @@ public class Myconstant {
 
     private String urlgetAllDataOrderByDesc = "http://www.androidthai.in.th/rmutk/getAllDataOrderByDesc.php";
 
-//    private String urlGetUserWhereId = "https://www.androidthai.in.th/rmutk/getUserWhereId.php";
+    //    private String urlGetUserWhereId = "https://www.androidthai.in.th/rmutk/getUserWhereId.php";
     private String urlGetFramerWhereId = "http://androidthai.in.th/rmutk/getFarmerWhereId.php";//ดึงค่าฟามเมอร์ในรายละเอียดผลิตภัณฑ์
 
     private String urlGetProductWhereIdRecord = "http://www.androidthai.in.th/rmutk/getProductrWhereIdRecord.php"; //where IdRecord
     private String urlGetProductWhereId = "http://www.androidthai.in.th/rmutk/getProductrWhereId.php"; //
     private String urlGetAllDeatailProduct = "http://www.androidthai.in.th/rmutk/getDetailProduct.php";//รายละเอียดผลิตภัณฑ์
     private String urlAddDetailProduct = "http://www.androidthai.in.th/rmutk/addDetailProductLilly.php"; //เพิ่มผลิตภัณฑ์
-    private String urlProductPic =  "https://www.androidthai.in.th/rmutk/Picture/product.png";
+    private String urlProductPic = "https://www.androidthai.in.th/rmutk/Picture/product.png";
 
     private String urlAddDetailFramer = "http://www.androidthai.in.th/rmutk/addDetailFramerLilly.php"; //เพิ่มผลผลิต
     private String urlAddUser = "https://www.androidthai.in.th/rmutk/addDataLilly.php";
@@ -44,7 +47,12 @@ public class Myconstant {
     private String urlGetDetailFarmerWhereName = "http://www.androidthai.in.th/rmutk/getDetailFramerWhereNameLilly.php"; //ปุ่มค้นหา ให้ค้นหาชื่อผลไม้
     private String urlGetMasterWhereName = "http://www.androidthai.in.th/rmutk/getMasterWhereNameLilly.php";//ปุ่มค้นหา สวน
 
-    private  String urlGetDetailFramerWhereIdRecordAnNameLilly = "http://www.androidthai.in.th/rmutk/getDetailFramerWhereIdRecordAnNameLilly.php";
+    private String urlGetDetailFramerWhereIdRecordAnNameLilly = "http://www.androidthai.in.th/rmutk/getDetailFramerWhereIdRecordAnNameLilly.php";
+
+
+    public String getUrlGetTypeFruit() {
+        return urlGetTypeFruit;
+    }
 
     public String getUrlGetDetailFramerWhereIdRecordAnNameLilly() {
         return urlGetDetailFramerWhereIdRecordAnNameLilly;
